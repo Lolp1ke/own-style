@@ -17,7 +17,7 @@ export function TagDataProvider({ children }) {
 		let className = ref.current.children[0];
 		let tagName = ref.current.children[1];
 
-		if (e.ctrlKey) {
+		if (e.code === "ControlLeft") {
 			ref.current.classList.add("show");
 
 			className.innerText =
