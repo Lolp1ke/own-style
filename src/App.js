@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+
+import "./assets/styles/default.css";
+
+import { useTag } from "./context/TagContext";
+
+import Header from "./components/Header";
+import Alert from "./components/Alert";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Features from "./components/Features";
+import Information from "./components/Information";
+import Download from "./components/Download";
+import Footer from "./components/Footer";
+import StyleChanger from "./components/StyleChanger";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { getTagData } = useTag();
+
+	useEffect(() => {
+		return () => {
+			document.querySelectorAll("#getTagData").forEach((el) => {
+				console.log(el);
+				el.addEventListener("click", function (event) {
+					getTagData(event);
+				});
+			});
+		};
+	}, []);
+
+	return (
+		<>
+			<Alert />
+			<Header />
+			<main>
+				<Hero />
+				<About />
+				<Features />
+				<Information />
+				<span className="app-image"></span>
+				<Download />
+			</main>
+			<Footer />
+			<StyleChanger />
+		</>
+	);
 }
 
 export default App;

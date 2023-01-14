@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 30px;
+  width: clamp(90%, 5.845rem - 0.94vw, 80%);
+  margin: auto;
+  gap: 30px;
+}
+@media (max-width: 910px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 40px;
+  background-image: url("/public/assets/images/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.hero__article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: clamp(0.625rem, 0.185rem + 1.88vw, 1.875rem);
+}
+.hero__title {
+  font-size: clamp(2.5rem, 1.62rem + 3.76vw, 5rem);
+}
+.hero__text {
+  font-size: clamp(1.125rem, 0.861rem + 1.13vw, 1.875rem);
+}
+.hero__button {
+  border: none;
+  background-color: #FC0A7E;
+  color: #ffffff;
+  width: fit-content;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+.hero__image {
+  object-fit: cover;
+  height: clamp(18.75rem, 12.588rem + 26.29vw, 36.25rem);
+}
+
+/*# sourceMappingURL=hero.css.map */

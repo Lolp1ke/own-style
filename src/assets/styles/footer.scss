@@ -1,0 +1,26 @@
+.footer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+	background-color: #1B1B1B;
+	padding: 40px 0;
+	// .footer__logo
+	&__logo {
+		width: fit-content;
+		margin: auto;
+	}
+
+	// .footer__nav
+	&__nav {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	// .footer__link
+	&__link {
+	}
+}

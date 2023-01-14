@@ -1,0 +1,98 @@
+.download {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	height: 50vh;
+	width: 100vw;
+	background: linear-gradient(276.18deg, #6E28B1 0%, rgba(0, 0, 0, 0) 100%), #FC0A7E;
+
+	// .download__title
+	&__title {
+		font-size: clamp(1.5rem, 1.192rem + 1.31vw, 2.375rem);
+		font-weight: 400;
+	}
+
+	// .download__buttons
+	&__buttons {
+		display: flex;
+		gap: 20px;
+		@media (max-width: 410px) {
+			flex-direction: column;
+		}
+	}
+
+	// .download__button
+	&__button {
+		background-color: #FC0A7E;
+		padding: 20px 40px;
+		transition: all var(--animation-speed) ease-in-out;
+		&:hover {
+			opacity: 0.6;
+		}
+		&:nth-child(even) {
+			background-color: transparent;
+			border: 1px solid #B04BB3;
+		}
+	}
+}
+.news {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+	width: 100vw;
+	height: 50vh;
+	background-color: #1C1C1C;
+	// .news__article
+	&__article {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	// .news__title
+	&__title {
+		font-size: 38px;
+		font-weight: 400;
+	}
+
+	// .news__text
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		color: #6B6B6B;
+	}
+
+	// .news__form
+	&__form {
+		display: flex;
+		justify-content: center;
+		width: clamp(20rem, 16.039rem + 16.9vw, 31.25rem);
+		margin: 0 auto;
+	}
+	&__input {
+		font-size: 16px;
+		font-weight: 400;
+		padding: 20px 0 20px 10px;
+		&:focus {
+			outline: none;
+		}
+	}
+	&__button {
+		border: none;
+		background-color: #FC0A7E;
+		border-radius: 0 3px 3px 0;
+		padding: 20px 40px;
+		cursor: pointer;
+		transition: all var(--animation-speed) ease-in-out;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+}
