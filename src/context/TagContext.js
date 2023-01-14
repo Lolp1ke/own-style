@@ -21,7 +21,8 @@ export function TagDataProvider({ children }) {
 			e.code === "ControlLeft" ||
 			e.keyCode === 17 ||
 			e.key === "Control" ||
-			e.which === 17
+			e.which === 17 ||
+			e.ctrlKey
 		) {
 			ref.current.classList.add("show");
 
