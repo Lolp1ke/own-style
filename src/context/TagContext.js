@@ -17,7 +17,12 @@ export function TagDataProvider({ children }) {
 		let className = ref.current.children[0];
 		let tagName = ref.current.children[1];
 
-		if (e.code === "ControlLeft") {
+		if (
+			e.code === "ControlLeft" ||
+			e.keyCode === 17 ||
+			e.key === "Control" ||
+			e.which === 17
+		) {
 			ref.current.classList.add("show");
 
 			className.innerText =
