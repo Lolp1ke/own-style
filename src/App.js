@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "./assets/styles/default.css";
 
@@ -17,16 +17,23 @@ import StyleChanger from "./components/StyleChanger";
 function App() {
 	const { getTagData } = useTag();
 
-	useEffect(() => {
-		return () => {
-			document.querySelectorAll("#getTagData").forEach((el) => {
-				console.log(el);
-				el.addEventListener("click", function (event) {
-					getTagData(event);
-				});
-			});
-		};
-	}, []);
+	// useEffect(() => {
+	// 	return () => {
+	// 		document.querySelectorAll("#getTagData").forEach((el) => {
+	// 			console.log(el);
+	// 			el.addEventListener("click", function (event) {
+	// 				getTagData(event);
+	// 			});
+	// 		});
+	// 	};
+	// }, []);
+
+	document.querySelectorAll("#getTagData").forEach((el) => {
+		console.log(el);
+		el.addEventListener("click", function (event) {
+			getTagData(event);
+		});
+	});
 
 	return (
 		<>
